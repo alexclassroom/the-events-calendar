@@ -9,6 +9,7 @@ use Tribe__Settings;
 use Tribe__Settings_Tab;
 use Tribe__Events__Main as Plugin;
 use Tribe\Admin\Troubleshooting as Troubleshooting;
+use Tribe\Admin\Elementor_Templates as Elementor_Templates;
 
 class Settings {
 
@@ -172,6 +173,8 @@ class Settings {
 			]
 		);
 
+		$this->maybe_add_elementor_templates();
+
 		$admin_pages->register_page(
 			[
 				'id'       => 'tec-events-help',
@@ -261,6 +264,31 @@ class Settings {
 				'capability' => 'install_plugins',
 				'callback'   => [
 					$app_shop,
+					'do_menu_page',
+				],
+			]
+		);
+	}
+
+	/**
+	 * Maybe add Elementor Templates page.s
+	 *
+	 * @since TBD
+	 */
+	public function maybe_add_elementor_templates() {
+		$admin_pages = tribe( 'admin.pages' );
+
+		$elementor_templates = tribe( Elementor_Templates::class );
+
+		$admin_pages->register_page(
+			[
+				'id'         => $elementor_templates::MENU_SLUG,
+				'parent'     => $this->get_tec_events_menu_slug(),
+				'title'      => esc_html__( 'Elementor Templates', 'the-events-calendar' ),
+				'path'       => $elementor_templates::MENU_SLUG,
+				'capability' => $elementor_templates->get_required_capability(),
+				'callback'   => [
+					$elementor_templates,
 					'do_menu_page',
 				],
 			]
