@@ -275,7 +275,7 @@ class Settings {
 	 *
 	 * @since TBD
 	 */
-	public function maybe_add_elementor_templates() {
+	public function maybe_add_elementor_templates(): void {
 		$admin_pages = tribe( 'admin.pages' );
 
 		$elementor_templates = tribe( Elementor_Templates::class );
