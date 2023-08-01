@@ -271,7 +271,7 @@ class Settings {
 	}
 
 	/**
-	 * Maybe add Elementor Templates page.s
+	 * Maybe add Elementor Templates page.
 	 *
 	 * @since TBD
 	 */
