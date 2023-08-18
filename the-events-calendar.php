@@ -75,3 +75,16 @@ Tribe__Events__Main::instance();
 register_activation_hook( TRIBE_EVENTS_FILE, array( 'Tribe__Events__Main', 'activate' ) );
 
 register_deactivation_hook( TRIBE_EVENTS_FILE, array( 'Tribe__Events__Main', 'deactivate' ) );
+
+/**
+ * Documentation? Delete this!
+ *
+ * @since TBD
+ *
+ * @return void
+ */
+function tec_add_some_strings() {
+	$foo = __( 'foo', 'tribe-common' );
+	$bar = _x( 'bar', 'A plave to go drink.', 'tribe-common' );
+	$baz = _nx( 'baz', 'bazs', 2, 'Multiple $bar in Boston.',  'tribe-common' );
+}

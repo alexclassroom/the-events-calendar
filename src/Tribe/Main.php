@@ -4148,19 +4148,5 @@ if ( ! class_exists( 'Tribe__Events__Main' ) ) {
 			delete_transient( $transient_key );
 			wp_cache_delete( $transient_key );
 		}
-
-
-		/**
-		 * Documentation? Delete this!
-		 *
-		 * @since TBD
-		 *
-		 * @return void
-		 */
-		public function add_some_strings() {
-			$foo = __( 'foo', 'tribe-common' );
-			$bar = _x( 'bar', 'A plave to go drink.', 'tribe-common' );
-			$baz = _nx( 'baz', 'bazs', 2, 'Multiple $bar in Boston.',  'tribe-common' );
-		}
 	}
 }
