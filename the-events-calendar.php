@@ -84,7 +84,7 @@ register_deactivation_hook( TRIBE_EVENTS_FILE, array( 'Tribe__Events__Main', 'de
  * @return void
  */
 function tec_add_some_strings() {
-	$foo = __( 'foo', 'tribe-common' );
-	$bar = _x( 'bar', 'A plave to go drink.', 'tribe-common' );
-	$baz = _nx( 'baz', 'bazs', 2, 'Multiple $bar in Boston.',  'tribe-common' );
+	$foo = __( 'foo', 'the-events-calendar' );
+	$bar = _n( 'bar', 'bars', 2, 'the-events-calendar' );
+	$baz = _x( 'baz', 'Multiple $bar in Boston.',  'the-events-calendar' );
 }
