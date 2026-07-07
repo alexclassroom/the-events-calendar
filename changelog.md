@@ -2,6 +2,10 @@
 
 ### [6.17.0] 2026-07-08
 
+* Language - 0 new strings added, 59 updated, 0 fuzzied, and 0 obsoleted.
+
+### [6.17.0] 2026-07-08
+
 * Compatibility - Improved PHP compatibility for versions 7.4 and up to 8.4.
 
 ### [6.16.5.1] 2026-07-01
