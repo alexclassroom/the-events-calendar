@@ -32,6 +32,9 @@ class CSVTest extends Events_TestCase {
 	/** @var string[] Symlinks created during a test; cleaned up in tearDown. */
 	private $temp_links = [];
 
+	/** @var string[] Directories created during a test; cleaned up in tearDown. */
+	private $temp_dirs = [];
+
 	// -------------------------------------------------------------------------
 	// Set-up / tear-down
 	// -------------------------------------------------------------------------
@@ -53,6 +56,11 @@ class CSVTest extends Events_TestCase {
 		foreach ( $this->temp_links as $link ) {
 			if ( is_link( $link ) ) {
 				@unlink( $link );
+			}
+		}
+		foreach ( $this->temp_dirs as $dir ) {
+			if ( is_dir( $dir ) ) {
+				@rmdir( $dir );
 			}
 		}
 		parent::tearDown();
@@ -330,6 +338,7 @@ class CSVTest extends Events_TestCase {
 		$link = untrailingslashit( sys_get_temp_dir() ) . '/tec-link-uploads-' . uniqid();
 
 		wp_mkdir_p( $real );
+		$this->temp_dirs[] = $real;
 
 		if ( ! @symlink( $real, $link ) ) {
 			$this->markTestSkipped( 'Symlinks are not supported on this host.' );
