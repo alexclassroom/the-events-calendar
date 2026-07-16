@@ -1,0 +1,4 @@
+Significance: patch
+Type: fix
+
+Corrected CSV imports that failed to show any records on sites with a symlinked uploads folder.
