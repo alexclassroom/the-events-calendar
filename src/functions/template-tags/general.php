@@ -1322,8 +1322,8 @@ function tribe_events_event_schedule_details( $event = null, $before = '', $afte
 				$end_date_full = tribe_get_end_date( $event, true, Tribe__Date_Utils::DBDATETIMEFORMAT );
 
 				// Use UTC so the wall-clock timestamps remain independent of PHP's default timezone.
-				$end_date_obj             = Tribe__Date_Utils::build_date_object( $end_date_full, 'UTC', false );
-				$end_date_full_timestamp  = false !== $end_date_obj ? $end_date_obj->getTimestamp() : strtotime( $end_date_full );
+				$end_date_obj            = Tribe__Date_Utils::build_date_object( $end_date_full, 'UTC', false );
+				$end_date_full_timestamp = false !== $end_date_obj ? $end_date_obj->getTimestamp() : strtotime( $end_date_full );
 
 				$beginning_of_day_str       = tribe_beginning_of_day( $end_date_full );
 				$beginning_of_day_obj       = Tribe__Date_Utils::build_date_object( $beginning_of_day_str, 'UTC', false );
