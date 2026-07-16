@@ -46,6 +46,10 @@ class scheduleDetailsTimezoneTest extends WPTestCase {
 		update_option( 'gmt_offset', 0 );
 		tribe_update_option( 'multiDayCutoff', '00:00' );
 
+		// Flush the request-lifetime caches so options and rendered details mutated
+		// by this test are not served to unrelated tests after the DB rollback.
+		$this->flush_date_caches();
+
 		parent::tearDown();
 	}
 

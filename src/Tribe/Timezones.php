@@ -165,8 +165,6 @@ class Tribe__Events__Timezones extends Tribe__Timezones {
 
 			$timestamps[ $cache_key ] = self::wall_clock_timestamp( $datetime );
 
-			tribe_set_var( $cache_var_name, $timestamps );
-
 			return $timestamps[ $cache_key ];
 		}
 

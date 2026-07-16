@@ -39,6 +39,13 @@ class WallClockTimestampTest extends \Codeception\TestCase\WPTestCase {
 		update_option( 'timezone_string', '' );
 		update_option( 'gmt_offset', 0 );
 
+		// Flush the request-lifetime caches so options and timestamps mutated by
+		// this test are not served to unrelated tests after the DB rollback.
+		tribe_unset_var( \Tribe__Settings_Manager::OPTION_CACHE_VAR_NAME );
+		tribe_unset_var( 'Tribe__Events__Timezones::get_event_timestamp' );
+
+		tribe( 'cache' )->reset();
+
 		parent::tearDown();
 	}
 
