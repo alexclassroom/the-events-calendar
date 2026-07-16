@@ -1319,10 +1319,10 @@ function tribe_events_event_schedule_details( $event = null, $before = '', $afte
 				$inner .= ( $html ? '</span>' : '' ) . $time_range_separator;
 				$inner .= $html ? '<span class="tribe-event-date-end">' : '';
 
-				$end_date_full = tribe_get_end_date( $event, true, Tribe__Date_Utils::DBDATETIMEFORMAT );
-				
+					$end_date_full = tribe_get_end_date( $event, true, Tribe__Date_Utils::DBDATETIMEFORMAT );
+
 				// Use UTC so the wall-clock timestamps remain independent of PHP's default timezone.
-				$end_date_full_timestamp = Tribe__Date_Utils::build_date_object( $end_date_full, 'UTC' )->getTimestamp();
+				$end_date_full_timestamp    = Tribe__Date_Utils::build_date_object( $end_date_full, 'UTC' )->getTimestamp();
 				$beginning_of_day_timestamp = Tribe__Date_Utils::build_date_object( tribe_beginning_of_day( $end_date_full ), 'UTC' )->getTimestamp();
 
 				// if the end date is <= the beginning of the day, consider it the previous day
