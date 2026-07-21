@@ -310,7 +310,7 @@ class Tribe__Events__Aggregator__Record__CSV extends Tribe__Events__Aggregator__
 	 *
 	 * @since 4.6.15
 	 * @since 6.15.17.1 Strengthen file type and location checks during aggregator imports.
-	 * @since TBD Resolve symlinks before validating the path so imports work on symlinked uploads directories.
+	 * @since 6.17.1 Resolve symlinks before validating the path so imports work on symlinked uploads directories.
 	 *
 	 * @return bool|false|string Either the absolute path to the CSV file or `false` on failure.
 	 */

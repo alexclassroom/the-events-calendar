@@ -195,7 +195,7 @@ class Tribe__Events__Timezones extends Tribe__Timezones {
 	 * timezone, and makes the result immune to third-party code calling
 	 * `date_default_timezone_set()`.
 	 *
-	 * @since TBD
+	 * @since 6.17.1
 	 *
 	 * @param string $datetime A datetime string representing a wall-clock time.
 	 *
