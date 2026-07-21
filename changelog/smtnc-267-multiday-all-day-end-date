@@ -1,4 +1,0 @@
-Significance: patch
-Type: fix
-
-Resolved an issue where multi-day all-day events displayed an incorrect end date when PHP's default timezone was changed by third-party code.

@@ -1,4 +1,0 @@
-Significance: patch
-Type: fix
-
-Resolved an issue where the Event Tickets registration page returned a 404 when the "Return 404 for disabled view URLs" setting was enabled.
