@@ -160,7 +160,7 @@ class Controller extends Controller_Contract {
 	 * conditionals are checked first for real requests, with the raw query vars as a
 	 * fallback for early hooks or direct calls where the conditionals are not yet set.
 	 *
-	 * @since TBD
+	 * @since 6.17.1
 	 *
 	 * @param \WP_Query $wp_query The global WP_Query object.
 	 *
