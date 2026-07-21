@@ -1,0 +1,4 @@
+Significance: patch
+Type: fix
+
+Resolved an issue where event times rendered in UTC on WooCommerce order pages and emails when PHP's default timezone was changed by third-party code.
